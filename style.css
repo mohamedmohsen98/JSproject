@@ -13,6 +13,17 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.head__form input.invalid {
+  border: 2px solid #f44336; /* Red border for errors */
+}
+
+.error-message {
+  color: #560303;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: none; /* Hidden by default */
+}
 
 .container {
   width: 80%;
@@ -59,7 +70,7 @@ body {
 }
 
 .head__form input {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   border: 1px solid #ccc;
   color: white;
@@ -85,7 +96,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.head__form__login:hover {
+.head__form__login:hover{
   background-color: rgb(200, 0, 0);
   cursor: pointer;
 }
@@ -121,6 +132,7 @@ hr {
   background-color: #1a1a1a;
   cursor: pointer;
 }
+
 
 @media (max-width: 768px) {
   .head__form {
