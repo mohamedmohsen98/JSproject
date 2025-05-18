@@ -1,14 +1,16 @@
-
- * {
+* {
   color: white;
-  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 body {
-  background: linear-gradient(to bottom, #000 20%, #e50914 50%, #000 90%);
+  background-image: url(../assets/images/netflix_login_background.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -18,7 +20,7 @@ body {
 }
 
 .error-message {
-  color: #560303;
+  color: #e3e3e3;
   font-weight: bold;
   font-size: 0.9rem;
   margin-top: 0.5rem;
@@ -31,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 999;
 }
 
 .head__logo {
@@ -63,10 +66,12 @@ body {
 .head__form {
   display: flex;
   flex-flow: column;
-  width: 35%;
+  width: 70%;
   padding: 1rem 0;
   gap: 0.5rem;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .head__form input {
@@ -78,6 +83,7 @@ body {
   border-radius: 0.3rem;
   font-size: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  width:70%;
 }
 
 .head__form input::placeholder {
@@ -94,9 +100,10 @@ body {
   font-weight: bolder;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
+  width:70%;
 }
 
-.head__form__login:hover{
+.head__form__login:hover {
   background-color: rgb(200, 0, 0);
   cursor: pointer;
 }
@@ -116,7 +123,7 @@ hr {
 
 .head__form__create {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border: 1px solid rgb(59, 57, 57);
   padding: 1.2rem;
   margin: 0.7rem auto;
@@ -126,6 +133,7 @@ hr {
   font-weight: bolder;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
+  width:70%;
 }
 
 .head__form__create:hover {
@@ -133,6 +141,14 @@ hr {
   cursor: pointer;
 }
 
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 @media (max-width: 768px) {
   .head__form {
@@ -157,3 +173,12 @@ hr {
   }
 }
 
+@media (max-width: 630px) {
+  .head__desc h1 {
+    font-size: 1.2rem;
+  }
+
+  .head__desc p {
+    font-size: 0.7rem;
+  }
+}

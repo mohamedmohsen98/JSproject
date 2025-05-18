@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NETFLIX</title>
-    <link rel="stylesheet" href="./Style/style.css">
-    <script src="./Script/script.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Style/index.css">
+
 </head>
+
 <body>
-   <main>
-    <section class="head">
-        <div class="container">
-            <div class="head__logo">
-                <img src="assets/images/netflix_png.png" alt="NETFLIX">
-            </div>
-            <div class="head__desc">
-                <h1>Unlimited movies, TV shows, and more</h1>
-                <p>Starts at EGP 100. Cancel anytime.</p>
-                <p>Ready to watch? Enter your email to create or restart your membership.</p>
-            </div>
-            <div class="head__form">
-                <input class="head__form__email" type="text" placeholder="Email address or phone number">
-                <input type="password" placeholder="Password" class="head__form__password">
-                <p class="error-message">E-mail must be: x@x.com<br>Password must be atleast 6 charachters</p>
-                <button class="head__form__login">Log in</button>
-                <a href="#" class="head__form__forgot">Forgotten password?</a>
-                <hr class="head__form__divider">
-                <a href="#" class="head__form__create">Create new account</a>
+    <nav class="nav">
+        <div class="container nav__section">
+            <img src="./assets/images/netflix_png.png">
+            <div class="nav__buttons">
+                <select name=id="">
+                    <option value="" disabled selected>Select language &darr;</option>
+                    <option value="English">English</option>
+                    <option value="English">عربي</option>
+                </select>
+                <button onclick="setTimeout(() => { window.location.href = './login.html'; }, 2000)">
+                    Sign In
+                </button>
+
             </div>
         </div>
-    </section>
-   </main>
+    </nav>
+    <main>
+        <section class="body">
+            <div class="container body__section">
+                <h1>NETFLIX</h1>
+            </div>
+        </section>
+
+        <section class="reasons">
+            <div class="container reasons__section">
+                <h2>More Reasons to Join</h2>
+                <div class="reasons__cards">
+                    <h3>Enjoy on your TV</h3>
+                    <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                    <i class="fa-solid fa-tv"></i>
+                </div>
+                <div class="reasons__cards">
+                    <h3>Download your shows to watch offline</h3>
+                    <p>Save your favorites easily and always have something to watch.</p>
+                    <i class="fa-solid fa-download"></i>
+                </div>
+                <div class="reasons__cards">
+                    <h3>Watch everywhere</h3>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__section">
+            <h4>CONTACT US</h4>
+            <div class="footer__icons">
+                <a href=""> <i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""> <i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
