@@ -63,7 +63,7 @@ a:hover {
 .hero__container__content {
   width: 42%;
   padding: 86px 0;
-  height: 580px; /* bigger height */
+  height: 580px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +72,7 @@ a:hover {
 
 .hero__container__content h2 {
   font-weight: 700;
-  font-size: 60px; /* slightly bigger */
+  font-size: 60px; 
   line-height: 1.2;
   color: rgba(255, 255, 255, 1);
   padding-bottom: 25px;
@@ -89,10 +89,10 @@ a:hover {
 
 .hero__container__content p {
   font-weight: 400;
-  font-size: 18px; /* a bit bigger */
+  font-size: 18px; 
   line-height: 1.4;
   color: rgba(255, 255, 255, 1);
-  max-height: calc(1.4em * 6); /* allow 6 lines */
+  max-height: calc(1.4em * 6); 
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -121,7 +121,7 @@ main[data-type="people"] {
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: #111; /* optional fallback background color */
+  background-color: #111; 
 }
 
 body {
@@ -155,11 +155,10 @@ main.people-background {
   background-repeat: no-repeat;
 }
 
-/* Search input styling */
 #searchInput {
-  background-color: #222; /* dark bg */
-  border: 1px solid #555; /* subtle border */
-  color: rgba(229, 229, 229, 1); /* text color same as links */
+  background-color: #222;
+  border: 1px solid #555; 
+  color: rgba(229, 229, 229, 1);
   font-size: 14px;
   padding: 8px 12px;
   border-radius: 4px;
@@ -177,13 +176,11 @@ main.people-background {
   background-color: #333;
 }
 
-/* Slider buttons container */
 .slider-buttons {
   text-align: center;
   margin: 15px 0;
 }
 
-/* Prev/Next buttons styling */
 .slider-buttons button {
   background-color: transparent;
   border: 1px solid rgba(229, 229, 229, 1);
@@ -226,40 +223,7 @@ main.people-background {
   }
 }
 
-@media (max-width: 768px) {
-  .nav__container,
-  .footer__cards {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .nav__icons,
-  .nav__links {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .hero__container__content {
-    width: 100%;
-    padding: 40px 0;
-    height: auto;
-  }
-
-  .hero__container__content h2 {
-    font-size: 28px;
-  }
-
-  .hero__container__content p {
-    font-size: 14px;
-  }
-
-  .footer__cards__item {
-    width: 48%;
-  }
-}
-
-/* Gemini Chatbot styles */
+/*  Chatbot  */
 .chatbot-container {
   position: fixed;
   bottom: 20px;
@@ -311,6 +275,41 @@ main.people-background {
 .chat-input button:hover {
   background-color: #f40612;
 }
+
+@media (max-width: 768px) {
+  .nav__container,
+  .footer__cards {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav__icons,
+  .nav__links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero__container__content {
+    width: 100%;
+    padding: 40px 0;
+    height: auto;
+  }
+
+  .hero__container__content h2 {
+    font-size: 28px;
+  }
+
+  .hero__container__content p {
+    font-size: 14px;
+  }
+
+  .footer__cards__item {
+    width: 48%;
+  }
+}
+
+
 
 @media (max-width: 480px) {
   .hero__container__content h2 {

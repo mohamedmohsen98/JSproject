@@ -16,7 +16,7 @@ body {
   background-attachment: fixed;
 }
 .head__form input.invalid {
-  border: 2px solid #f44336; /* Red border for errors */
+  border: 2px solid #f44336; 
 }
 
 .error-message {
@@ -24,7 +24,7 @@ body {
   font-weight: bold;
   font-size: 0.9rem;
   margin-top: 0.5rem;
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 .container {
