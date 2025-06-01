@@ -5,38 +5,34 @@
   font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
     sans-serif;
 }
-body{
-    background-color: black;
-    color: white;
-    
+body {
+  background-color: black;
+  color: white;
 }
-.body{
-    background: linear-gradient(to bottom,
+.body {
+  background: linear-gradient(
+    to bottom,
     rgb(0, 0, 0) 0%,
     rgba(0, 0, 0, 0.9) 6%,
     rgba(249, 3, 3, 0.9) 12%,
     rgba(243, 8, 8, 0.9) 18%,
     rgba(21, 20, 20, 0.9) 24%,
     rgba(0, 0, 0, 0.9) 30%,
-    /* rgba(249, 10, 10, 0.9) 36%, */
-    /* rgba(231, 15, 15, 0.9) 40%, */
-    rgba(13, 9, 9, 0.9) 46%,
+    /* rgba(249, 10, 10, 0.9) 36%, */ /* rgba(231, 15, 15, 0.9) 40%, */
+      rgba(13, 9, 9, 0.9) 46%,
     rgba(0, 0, 0, 0.9) 52%,
-    /* rgba(234, 6, 6, 0.9) 58%, */
-    /* rgba(234, 6, 6, 0.9) 64%, */
-    rgba(13, 0, 0, 0.9) 70%,
+    /* rgba(234, 6, 6, 0.9) 58%, */ /* rgba(234, 6, 6, 0.9) 64%, */
+      rgba(13, 0, 0, 0.9) 70%,
     rgba(15, 0, 0, 0.9) 76%,
     rgba(234, 6, 6, 0.9) 82%,
     rgba(234, 6, 6, 0.9) 88%,
     rgba(14, 1, 1, 0.9) 94%,
     rgb(19, 1, 1) 100%
   );
-  animation:flicker 6s ease-in-out infinite;
+  animation: flicker 6s ease-in-out infinite;
   padding: 50px 0;
   margin: 50px 0;
 }
-
-
 
 .container {
   margin: 0 auto;
@@ -51,24 +47,23 @@ body{
   background-color: black;
 }
 
-select
- {
-    background-color: rgb(0, 0, 0);
-    border-style: white;
-    font-size: 1rem;
-    padding: 7px 12px 7px 12px;
-    border-radius: 4px;
-    color: white;
-    appearance: none;
+select {
+  background-color: rgb(0, 0, 0);
+  border-style: white;
+  font-size: 1rem;
+  padding: 7px 12px 7px 12px;
+  border-radius: 4px;
+  color: white;
+  appearance: none;
 }
 
-button{
-    padding: 7px 12px;
-    font-size: 1rem;
-    border-radius: 4px;
-    background-color:  rgb(234, 6, 6);
-    color:white;
-    border: 1px solid red;
+button {
+  padding: 7px 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: rgb(234, 6, 6);
+  color: white;
+  border: 1px solid red;
 }
 
 button:hover {
@@ -82,72 +77,99 @@ button:hover {
 }
 
 .body__section h1 {
-    font-size: 5rem;
-    color: red;
-    font-weight: bold;
-    animation: flicker 3s ease-in-out infinite;
-    letter-spacing: 2px;
-    text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red; 
-    padding-bottom: 80px;
+  font-size: 5rem;
+  color: red;
+  font-weight: bold;
+  animation: flicker 3s ease-in-out infinite;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red;
+  padding-bottom: 80px;
 }
 
-img{
-    width:20%
+img {
+  width: 20%;
 }
 
-.reasons__cards{
-
-    border-radius:5px;
-    margin:15px 0;
-    line-height:30px;
-    background: linear-gradient(135deg, 
+.reasons__cards {
+  border-radius: 5px;
+  margin: 15px 0;
+  line-height: 30px;
+  background: linear-gradient(
+    135deg,
     rgba(0, 0, 0, 0.7) 30%,
-    rgba(231, 15, 15, 0.5) 100% 
+    rgba(231, 15, 15, 0.5) 100%
   );
 }
 
-.footer{
-    margin-top: 50px;
-    text-align: center;
+.footer {
+  margin-top: 50px;
+  text-align: center;
 }
 
-.footer__icons{
-    padding:15px;
+.footer__icons {
+  padding: 15px;
 }
 
 .footer__icons a i {
-    color: rgb(234, 6, 6);
-    margin:0 15px;
-    font-size: 2rem;
+  color: rgb(234, 6, 6);
+  margin: 0 15px;
+  font-size: 2rem;
 }
 
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.4;
+  }
+}
 
+@media (max-width: 768px) {
+  .body__section h1 {
+    font-size: 3rem;
+  }
 
+  img {
+    width: 40%;
+  }
 
+  .nav__section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
+  select,
+  button {
+    width: 100%;
+  }
+}
 
+@media (max-width: 480px) {
+  .body__section h1 {
+    font-size: 2.2rem;
+  }
 
+  img {
+    width: 60%;
+  }
 
+  .reasons__cards {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 24%, 55% {
-        opacity: 0.4;
-      }
-    }
+  .footer__icons a i {
+    font-size: 1.5rem;
+  }
+}

@@ -3,37 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Movie Details</title>
-  <style>
-    body {
-      background-color: #141414;
-      color: white;
-      font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-  </style>
+  <title>Details</title>
+  <link rel="stylesheet" href="./Style/details.css">
+  <script src="./Script/details.js" defer></script>
 </head>
 <body>
   <h1 id="movieTitle">Loading...</h1>
   <img id="movieImage" src="" alt="Movie Backdrop" />
   <p id="movieDescription"></p>
 
-  <script>
-    const movie = JSON.parse(localStorage.getItem("selectedMovie"));
-    if (!movie) {
-      document.getElementById("movieTitle").textContent = "No movie selected.";
-    } else {
-      document.getElementById("movieTitle").textContent = movie.title || movie.name || "Untitled";
-      document.getElementById("movieDescription").textContent = movie.overview || "No description available.";
-      document.getElementById("movieImage").src = "https://image.tmdb.org/t/p/original" + movie.backdrop_path;
-      document.getElementById("movieImage").alt = movie.title || movie.name;
-    }
-  </script>
+  <section id="feedbackSection">
+    <h2>Feedback</h2>
+    <form id="feedbackForm">
+      <textarea id="feedbackInput" rows="4" placeholder="Write your feedback here..." required></textarea>
+      <br />
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <div id="feedbackList"></div>
+  </section>
 </body>
 </html>

@@ -76,7 +76,7 @@ a:hover {
   line-height: 1.2;
   color: rgba(255, 255, 255, 1);
   padding-bottom: 25px;
-  
+
   max-height: calc(1.2em * 5); /* allow 5 lines */
   overflow: hidden;
   text-overflow: ellipsis;
@@ -100,7 +100,6 @@ a:hover {
   -webkit-box-orient: vertical;
   word-wrap: break-word;
 }
-
 
 .hero__container__content__img {
   width: 56%;
@@ -154,4 +153,184 @@ main.people-background {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+/* Search input styling */
+#searchInput {
+  background-color: #222; /* dark bg */
+  border: 1px solid #555; /* subtle border */
+  color: rgba(229, 229, 229, 1); /* text color same as links */
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+
+#searchInput::placeholder {
+  color: rgba(180, 180, 180, 0.7);
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: gray;
+  background-color: #333;
+}
+
+/* Slider buttons container */
+.slider-buttons {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Prev/Next buttons styling */
+.slider-buttons button {
+  background-color: transparent;
+  border: 1px solid rgba(229, 229, 229, 1);
+  color: rgba(229, 229, 229, 1);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.slider-buttons button:hover {
+  color: gray;
+  border-color: gray;
+  background-color: rgba(229, 229, 229, 0.1);
+}
+
+.slider-buttons button:disabled {
+  color: #555;
+  border-color: #555;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  .hero__container__content {
+    width: 60%;
+    padding: 60px 0;
+  }
+
+  .hero__container__content h2 {
+    font-size: 40px;
+  }
+
+  .hero__container__content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__container,
+  .footer__cards {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav__icons,
+  .nav__links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero__container__content {
+    width: 100%;
+    padding: 40px 0;
+    height: auto;
+  }
+
+  .hero__container__content h2 {
+    font-size: 28px;
+  }
+
+  .hero__container__content p {
+    font-size: 14px;
+  }
+
+  .footer__cards__item {
+    width: 48%;
+  }
+}
+
+/* Gemini Chatbot styles */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  max-height: 500px;
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  height: 300px;
+  scroll-behavior: smooth;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #333;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #111;
+  color: white;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chat-input button:hover {
+  background-color: #f40612;
+}
+
+@media (max-width: 480px) {
+  .hero__container__content h2 {
+    font-size: 22px;
+  }
+
+  .hero__container__content p {
+    font-size: 13px;
+  }
+
+  .footer__cards__item {
+    width: 100%;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+
+  .slider-buttons button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
 }
